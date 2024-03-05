@@ -40,9 +40,9 @@ def split_data(preprocessed_data):
     train_dataset = CustomDataset(X_train, y_train)
     test_dataset = CustomDataset(X_test, y_test)
 
-    batch_size = 64  # Set your desired batch size
+    batch_size = 32  # Set your desired batch size
 
-    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
-    test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=True)
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=False)
+    test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
 
     return train_loader, test_loader
